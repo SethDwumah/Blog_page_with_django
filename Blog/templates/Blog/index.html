@@ -1,14 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{% extends 'Blog/_base.html' %}
+{% block content%}
+   
 <body>
-    {% for p in post %}
-    <h1>
-        <a class="text-danger" href="{ urls 'details'}"></a>{{ p }}</h1>
-    {%endfor%}
-</body>
-</html>
+
+
+    <main>
+  
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+              <rect width="100%" height="100%" fill="#777" /></svg>
+  
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1>Example headline.</h1>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget
+                  metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a class="btn btn-lg btn-primary" href="{% url 'register' %}" role="button">Sign up today</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMidYMid slice" role="img" focusable="false">
+              <rect width="100%" height="100%" fill="#777" /></svg>
+  
+         
+  
+  </body>
+  
+  </html>
+
+{% endblock content%}
