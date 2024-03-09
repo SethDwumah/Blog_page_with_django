@@ -1,15 +1,17 @@
 {% extends 'Blog/_base.html' %}
 {% block content%}
-   
+   <br>
 
     {% for p in post %}
     <h1>
-        {{ p }}
+        <a href="">{{ p }}</a>
     </h1>
     <p class="date">
         Published {{ p.publish}} by {{p.author}}
     </p>
     {{ p.body| linebreaks}}
     {%endfor%}
-
+    <p><a class="btn btn-lg btn-primary" href="{% url 'home' %}" role="button">Sign Out</a></p>
+    <br>
+    <p><a class="btn btn-lg btn-primary" href="{% url 'chatbot' %}" role="button">Chat with AI assistant</a></p>
 {% endblock content%}

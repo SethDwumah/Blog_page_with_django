@@ -1,0 +1,31 @@
+{% extends 'Blog/_base.html' %}
+{% block content%}
+<br>
+
+   
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+ <body>
+    <style class="align-self: start;"></style>
+    <h3> Write your prompt</h3>
+   
+    
+    <form method="post">
+        {%csrf_token%}
+      <input type="text" name="user_input">
+      
+    <button type="submit">Submit</button>
+    </form>
+    
+    <br>
+    {{response|safe}}
+ </body>
+ </html>
+    
+  
+
+
+
+
+{% endblock content%}
+
